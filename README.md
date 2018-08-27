@@ -9,4 +9,4 @@ written in Python3, and depends on these modules:
 
 ## usage
 
-see the `sample() in `fetcher.py`.
+see the `sample()` in `fetcher.py`.
