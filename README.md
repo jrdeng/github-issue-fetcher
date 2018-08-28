@@ -15,13 +15,14 @@ written in Python3, and depends on these modules:
 
 usage:
 
-    git clone https://github.com/jrdeng/github-issue-fetcher.git github_issue_fetcher
+    $ git clone https://github.com/jrdeng/github-issue-fetcher.git
+    # or use as submodule
     
-    # we replace dash with underscore so it can be imported as a submodule in Python    
-    
-    from github_issue_fetcher import fetch_issues
-  
-    issue_list = fetch_issues(token, owner, repo)
+    # import to your project
+    import sys
+    sys.path.append('github-issue-fetcher')
+    import fetcher
+    issue_list = fetcher.fetch_issues(token, owner, repo)
 
 the `owner` and `repo` specified whose/which repository you want.
 
