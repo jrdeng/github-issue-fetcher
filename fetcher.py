@@ -2,7 +2,7 @@ import sys
 import os
 import getopt
 
-import gql
+from gql import gql
 
 
 def fetch_issues(token, owner, repo):
