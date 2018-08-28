@@ -15,7 +15,7 @@ written in Python3, and depends on these modules:
 
 usage:
 
-    git clone git@github.com:jrdeng/github-issue-fetcher.git github_issue_fetcher
+    git clone https://github.com/jrdeng/github-issue-fetcher.git github_issue_fetcher
     
     # we replace dash with underscore so it can be imported as a submodule in Python    
     
