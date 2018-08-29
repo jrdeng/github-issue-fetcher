@@ -35,7 +35,7 @@ for convenience, there's a `sample()` in `fetcher.py`.
 ## known issues
 
 1. the maximum number of nodes of one `query` is limited to 500,000
-2. the max value of parameter `last` is limited to 100
+2. the max value of parameter `last` is limited to 100 (**fixed**)
 
 ## license
 

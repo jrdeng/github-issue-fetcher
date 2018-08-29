@@ -1,7 +1,12 @@
 class Author:
     def __init__(self, json):
-        self.login = json['login']
-        self.avatarUrl = json['avatarUrl']
+        # we may ge None for 'author'...
+        if json is None:
+            self.login = 'None'
+            self.avatarUrl = 'https://avatars0.githubusercontent.com/u/170314?v=4' # just hardcode it ...
+        else:
+            self.login = json['login']
+            self.avatarUrl = json['avatarUrl']
 
     def __str__(self):
         r = '{'
@@ -9,3 +14,4 @@ class Author:
         r += 'avatarUrl={}'.format(self.avatarUrl)
         r += '}'
         return r
+
