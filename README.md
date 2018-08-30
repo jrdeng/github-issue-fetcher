@@ -1,6 +1,8 @@
 # github issue fetcher
 
-using [Github GraphQL API](https://developer.github.com/v4/) to fetch issues of the specified repository on github.
+use [Github GraphQL API](https://developer.github.com/v4/) to fetch issues of the specified repository on github.
+
+I'm using these scripts to fetch issues then generate static website(by using [Hugo](https://gohugo.io/)). see  [blog-hugo](https://github.com/jrdeng/blog-hugo)`/generate_and_deploy.py`
 
 written in Python3, and depends on these modules:
 
@@ -31,11 +33,6 @@ you will get a list of object `Issue` which defined in [gql/issue.py](gql/issue.
 mostly, you'll need to modify the `query_str` in [gql/gql.py](gql/gql.py) to fetch the data you want. and modify the class Issue to parse the result.
 
 for convenience, there's a `sample()` in `fetcher.py`.
-
-## known issues
-
-1. the maximum number of nodes of one `query` is limited to 500,000
-2. the max value of parameter `last` is limited to 100 (**fixed**)
 
 ## license
 
