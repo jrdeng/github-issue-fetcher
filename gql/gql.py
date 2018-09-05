@@ -51,7 +51,7 @@ def fetch_issues(token, repo_owner, repo_name):
               }}
               createdAt
               body
-              labels(first: 10) {{
+              labels(first: 20) {{
                 totalCount
                 edges {{
                   node {{
@@ -95,7 +95,7 @@ def fetch_issues(token, repo_owner, repo_name):
         else:
             query_n = query_str_fmt.format(repo_owner, repo_name, cursor_fmt.format(end_cursor))
             payload = { 'query': query_n}
-        print('>>>>>> fetching issues ... {}x100'.format(index))
+        print('>>>>>> fetching issues ... 100 x {}'.format(index))
         index += 1
         data = post(url, headers, payload)
         if data is None:
