@@ -12,7 +12,7 @@ def post(url, headers, payload):
             return None 
 
         # debug
-        #print(r.json())
+        print(r.json())
 
         data = r.json()['data']
         if data is None:
@@ -38,7 +38,7 @@ def fetch_issues(token, repo_owner, repo_name):
     query_str_fmt = '''
     query
     {{
-      repository(owner: {}, name: "{}") {{
+      repository(owner: "{}", name: "{}") {{
         issues(first: 100, states: OPEN{}) {{
           totalCount
           edges {{
